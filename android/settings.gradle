@@ -1,4 +1,4 @@
-rootProject.name = 'TodoApp'
+rootProject.name = 'InventoryApp'
 
 include ':app'
 include ':react-native-navigation'

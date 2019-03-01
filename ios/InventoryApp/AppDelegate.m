@@ -21,7 +21,7 @@
   [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"TodoApp"
+                                                      moduleName:@"InventoryApp"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
   rootView.backgroundColor = [UIColor blackColor];

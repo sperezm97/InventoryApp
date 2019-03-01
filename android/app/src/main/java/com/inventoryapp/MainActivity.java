@@ -1,4 +1,4 @@
-package com.todoapp;
+package com.inventoryapp;
 
 import com.facebook.react.ReactActivity;
 import com.reactnativenavigation.NavigationActivity;
@@ -11,6 +11,6 @@ public class MainActivity extends NavigationActivity {
      */
     // @Override
     // protected String getMainComponentName() {
-    //     return "TodoApp";
+    //     return "InventoryApp";
     // }
 }

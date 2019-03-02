@@ -6,7 +6,7 @@
 import { AppRegistry } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { name as appName } from './app.json'
-import { registrationScreen } from './src/containers/screens'
+import registrationScreen from './src/containers/screens'
 import * as navFlows from './src/config/navigationFlows'
 
 registrationScreen()

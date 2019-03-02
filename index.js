@@ -56,6 +56,6 @@ Navigation.events().registerAppLaunchedListener(() => {
       interceptTouchOutside: true
     }
   })
-  navFlows.authFlow()
+  navFlows.homeFLow()
 })
 

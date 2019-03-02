@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
-// import PropTypes from 'prop-types'
-// import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 class Drawer extends Component {
   static propTypes = {
@@ -18,13 +18,12 @@ class Drawer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  
+
 })
 
 const mapDispatchToProps = {
-  
+
 }
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Drawer)
-export default Drawer
+export default connect(mapStateToProps, mapDispatchToProps)(Drawer)
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
-// import PropTypes from 'prop-types'
-// import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 class Register extends Component {
   static propTypes = {
@@ -18,13 +18,12 @@ class Register extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  
+
 })
 
 const mapDispatchToProps = {
-  
+
 }
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Register)
-export default Register
+export default connect(mapStateToProps, mapDispatchToProps)(Register)
 

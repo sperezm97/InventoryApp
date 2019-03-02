@@ -3,45 +3,45 @@
 //  * @lint-ignore-every XPLATJSCOPYRIGHT1
 //  */
 
-import {AppRegistry} from 'react-native';
-import {name as appName} from './app.json';
-import { Navigation } from "react-native-navigation";
+import { AppRegistry } from 'react-native'
+import { Navigation } from 'react-native-navigation'
+import { name as appName } from './app.json'
 import { registrationScreen } from './src/containers/screens'
-import * as navFlows from './src/config/navigationFlows';
+import * as navFlows from './src/config/navigationFlows'
 
-registrationScreen();
+registrationScreen()
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setDefaultOptions({
     topBar: {
-     visible: false
+      visible: false
     },
     statusBar: {
       visible: true,
       style: 'light'
     },
     layout: {
-     orientation: ['portrait']
+      orientation: ['portrait']
     },
     bottomTabs: {
-     titleDisplayMode: 'alwaysShow',
-     visible: true,
-     animate: true,
-     currentTabId: '',
-     currentTabIndex: 0,
-     drawBehind: false,
-     barStyle: 'default',
-     translucent: false,
+      titleDisplayMode: 'alwaysShow',
+      visible: true,
+      animate: true,
+      currentTabId: '',
+      currentTabIndex: 0,
+      drawBehind: false,
+      barStyle: 'default',
+      translucent: false,
       hideShadow: false
     },
     bottomTab: {
       textColor: 'gray',
       selectedTextColor: 'black',
       iconColor: 'gray',
-      selectedIconColor: 'black',
+      selectedIconColor: 'black'
     },
-    sideMenu:{
-      left:{
+    sideMenu: {
+      left: {
         shouldStretchDrawer: true,
         animationVelocity: 2500,
         width: 260,
@@ -52,11 +52,10 @@ Navigation.events().registerAppLaunchedListener(() => {
       animationType: 'parallax',
       openGestureMode: 'entireScreen'
     },
-    overlay:{
+    overlay: {
       interceptTouchOutside: true
     }
-  });
+  })
   navFlows.authFlow()
-});
+})
 
-AppRegistry.registerComponent(appName, () => App);

@@ -11,6 +11,6 @@ import * as screen from '../containers/screens';
 export default function registrationScreen() {
   Navigation.registerComponent(screen.SCREEN_LOGIN, () => WrapperProvider(Login));
   Navigation.registerComponent(screen.SCREEN_REGISTER, () => WrapperProvider(Register));
-  Navigation.registerComponent(screen.SCREEN_HOME, () => WrapperProvider(Home));
+  Navigation.registerComponent(screen.SCREEN_DASHBOARD, () => WrapperProvider(Home));
   Navigation.registerComponent(screen.SCREEN_DRAWER, () => WrapperProvider(Drawer));
 }

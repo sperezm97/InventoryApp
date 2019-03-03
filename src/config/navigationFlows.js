@@ -29,7 +29,7 @@ export const homeFLow = () => (
         children: [
           {
             component: {
-              name: screen.SCREEN_HOME
+              name: screen.SCREEN_DASHBOARD
             }
           }
         ]
@@ -50,12 +50,12 @@ export const principalFlow = () => (
         children: [
           {
             component: {
-              name: screen.SCREEN_HOME
+              name: screen.SCREEN_DASHBOARD
             }
           },
           {
             component: {
-              name: screen.SCREEN_HOME
+              name: screen.SCREEN_DASHBOARD
             }
           }
         ]

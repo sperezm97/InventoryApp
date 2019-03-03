@@ -3,13 +3,11 @@
 //  * @lint-ignore-every XPLATJSCOPYRIGHT1
 //  */
 
-import { AppRegistry } from 'react-native'
-import { Navigation } from 'react-native-navigation'
-import { name as appName } from './app.json'
-import registrationScreen from './src/containers/screens'
-import * as navFlows from './src/config/navigationFlows'
+import { Navigation } from 'react-native-navigation';
+import registrationScreen from './src/containers/screens';
+import * as navFlows from './src/config/navigationFlows';
 
-registrationScreen()
+registrationScreen();
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setDefaultOptions({
@@ -55,7 +53,6 @@ Navigation.events().registerAppLaunchedListener(() => {
     overlay: {
       interceptTouchOutside: true
     }
-  })
-  navFlows.homeFLow()
-})
-
+  });
+  navFlows.homeFLow();
+});

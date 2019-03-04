@@ -16,7 +16,13 @@
 | Jest| [24.0.1](https://jestjs.io/docs/en/tutorial-react-native) | Unit Test Framework |
 
 
-## TODO
+### TODO
 - [ ] CONTINUOS INTEGRATION [FASTLANE](https://docs.fastlane.tools/)
 - [ ] JEST UNIT TEST TURORIAL
 - [X] AXIOS CONFIG
+
+### CI Fastlane docs
+- Automatically generate localized App Store screenshots [DOCS](https://docs.fastlane.tools/getting-started/ios/screenshots/)
+- Distribution to beta testing services [DOCS](https://docs.fastlane.tools/getting-started/ios/beta-deployment/)
+- Automate the App Store release process [DOCS](https://docs.fastlane.tools/getting-started/ios/appstore-deployment/)
+- How to setup code signing with fastlane [DOCS](https://docs.fastlane.tools/codesigning/getting-started/)

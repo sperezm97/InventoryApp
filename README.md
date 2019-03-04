@@ -19,4 +19,4 @@
 ## TODO
 - [ ] CONTINUOS INTEGRATION [FASTLANE](https://docs.fastlane.tools/)
 - [ ] JEST UNIT TEST TURORIAL
-- [ ] AXIOS CONFIG
+- [X] AXIOS CONFIG

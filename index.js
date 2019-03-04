@@ -4,7 +4,7 @@
 //  */
 
 import { Navigation } from 'react-native-navigation';
-import registrationScreen from './src/containers/screens';
+import registrationScreen from './src/containers/registrationScreen';
 import * as navFlows from './src/config/navigationFlows';
 
 registrationScreen();

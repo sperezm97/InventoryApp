@@ -20,6 +20,10 @@
 - [ ] CONTINUOS INTEGRATION [FASTLANE](https://docs.fastlane.tools/)
 - [ ] JEST UNIT TEST TURORIAL
 - [X] AXIOS CONFIG
+- [ ] SENTRY IO ERROR TRACKING
+- [ ] PUSH NOTIFIACTION ANDROID/IOS
+- [ ] SWIPE LIST
+
 
 ### CI Fastlane docs
 - Automatically generate localized App Store screenshots [DOCS](https://docs.fastlane.tools/getting-started/ios/screenshots/)

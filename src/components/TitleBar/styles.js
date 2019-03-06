@@ -10,6 +10,9 @@ export default StyleSheet.create({
   },
   leftContainer: {
     paddingLeft: 14
+  },
+  rightContainer: {
+    paddingRight: 14
   }
 
 });

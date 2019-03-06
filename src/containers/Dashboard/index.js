@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Content, Card, CardItem, Text, View, Body, Title, Button, Icon } from 'native-base';
-import TitleBar from '../../components/Header';
+import TitleBar from '@components/TitleBar';
 
 class Dashboard extends Component {
   static propTypes = {

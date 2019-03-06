@@ -22,44 +22,31 @@ export const authFlow = () => (
   })
 );
 
-export const homeFLow = () => (
-  Navigation.setRoot({
-    root: {
-      stack: {
-        children: [
-          {
-            component: {
-              name: screen.SCREEN_DASHBOARD
-            }
-          }
-        ]
-      }
-    }
-  })
-);
-
 export const principalFlow = () => (
   Navigation.setRoot({
     root: {
       sideMenu: {
         left: {
           component: screen.SCREEN_DRAWER
+        },
+        center: {
+          bottomTabs: {
+            children: [
+              {
+                component: {
+                  name: screen.SCREEN_DASHBOARD
+                }
+              },
+              {
+                component: {
+                  name: screen.SCREEN_LIST_ARTICLES
+                }
+              }
+            ]
+          }
+
         }
       },
-      bottomTabs: {
-        children: [
-          {
-            component: {
-              name: screen.SCREEN_DASHBOARD
-            }
-          },
-          {
-            component: {
-              name: screen.SCREEN_DASHBOARD
-            }
-          }
-        ]
-      }
     }
   })
 );

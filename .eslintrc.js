@@ -11,7 +11,10 @@ module.exports = {
       'comma-dangle': 'off',
       'import/no-extraneous-dependencies': 'off',
       'class-methods-use-this': 'off',
-      'eqeqeq': 'off'
+      'eqeqeq': 'off',
+      'object-curly-newline': 'off',
+      'react/destructuring-assignment': 'off',
+      'import/no-unresolved': 'off'
     },
     'globals': {
       "fetch": false

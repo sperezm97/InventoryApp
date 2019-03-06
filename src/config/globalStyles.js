@@ -1,4 +1,5 @@
 import { Dimensions, Platform, PixelRatio } from 'react-native';
+import { colors } from './colors';
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -45,18 +46,30 @@ const iconSizes = {
 };
 // Android Font Sizes
 const IconSizesAndroid = {
-  h1: 96,
-  h2: 60,
-  h3: 48,
-  h4: 34,
-  h5: 24,
-  h6: 16,
-  subtitle1: 16,
-  subtitle2: 14,
-  body1: 16,
-  body2: 14,
-  button: 14,
-  caption1: 12,
-  caption2L: 10,
+  normalIcons: 24,
+  // inputs buttons
+  inputIcons: 20,
 
-}
+};
+
+const globalStyle = {
+  globalContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: colors.lightGrey
+  },
+  contentContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 4,
+
+  },
+  // Title bar styles for Screen
+  iconSize: {
+    fontSize: iconSizes.minNavigationBar,
+    color: colors.black
+  }
+};
+
+
+export { iconSizes, IconSizesAndroid, globalStyle };

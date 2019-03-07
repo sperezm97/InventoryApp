@@ -8,12 +8,14 @@ const InputStyle = (props) => {
   if (props.password) {
     return (
       <Item rounded style={styles.inputContainer} success>
+        {!!props.Icon && props.Icon}
         <Input {...props} secureTextEntry={props.password} />
       </Item>
     );
   }
   return (
     <Item rounded style={styles.inputContainer} success>
+      {!!props.Icon && props.Icon}
       <Input {...props} />
     </Item>
   );
@@ -21,21 +23,20 @@ const InputStyle = (props) => {
 
 InputStyle.propTypes = {
   props: PropTypes.shape({
-    onChange: PropTypes.func.isRequired,
+    onChangeText: PropTypes.func.isRequired,
     value: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     password: PropTypes.bool,
-    name: PropTypes.string.isRequired
+    Icon: PropTypes.element
   })
 };
 
 InputStyle.defaultProps = {
   props: {
-    onChange: () => Alert.alert('try'),
+    onChangeText: () => Alert.alert('try'),
     value: 'prueba',
     placeholder: 'Prueba',
     password: false,
-    name: 'mail'
   }
 };
 

@@ -10,6 +10,8 @@ import * as navFlows from './src/config/navigationFlows';
 registrationScreen();
 
 Navigation.events().registerAppLaunchedListener(() => {
+  console.ignoredYellowBox = false,
+  console.disableYellowBox = true
   Navigation.setDefaultOptions({
     topBar: {
       visible: false
@@ -54,5 +56,5 @@ Navigation.events().registerAppLaunchedListener(() => {
       interceptTouchOutside: true
     }
   });
-  navFlows.homeFLow();
+  navFlows.authFlow();
 });

@@ -55,7 +55,6 @@ const IconSizesAndroid = {
 const globalStyle = {
   globalContainer: {
     flex: 1,
-    flexDirection: 'column',
     backgroundColor: colors.lightGrey
   },
   contentContainer: {
@@ -65,7 +64,7 @@ const globalStyle = {
 
   },
   // Title bar styles for Screen
-  iconSize: {
+  iconSizeNav: {
     fontSize: iconSizes.minNavigationBar,
     color: colors.black
   }

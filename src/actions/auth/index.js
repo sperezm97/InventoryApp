@@ -6,11 +6,11 @@ export const saveUserData = user => ({
 });
 
 export const editUserData = user => ({
-  type: actions.SAVE_USER_DATA,
+  type: actions.EDIT_USER_DATA,
   payload: user
 });
 
 export const signOutData = () => ({
-  type: actions.SAVE_USER_DATA
+  type: actions.SIGN_OUT_USER
 
 });

@@ -14,3 +14,8 @@ export const signOutData = () => ({
   type: actions.SIGN_OUT_USER
 
 });
+
+export const signUpUser = user => ({
+  type: actions.REGISTER_USER,
+  payload: user
+});

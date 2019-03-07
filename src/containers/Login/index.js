@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Content, Button, Icon, View, Text } from 'native-base';
@@ -10,6 +9,7 @@ import svgIcons from '../../config/imagesUris';
 import styles from './styles';
 import { colors } from '../../config/colors';
 import axios from '../../config/axios';
+import { saveUserData } from '@actions/auth';
 
 class Login extends Component {
   static propTypes = {
@@ -34,12 +34,12 @@ class Login extends Component {
 
   singInUser() {
     axios.post('/auth/login', this.state.data)
-      .then(res => {
-        console.log(res);
+      .then((res) => {
+        this.props.saveUserData(res.data);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
-      })
+      });
   }
 
   render() {
@@ -89,10 +89,10 @@ class Login extends Component {
 
 const mapStateToProps = (state) => ({
 
-})
+});
 
 const mapDispatchToProps = {
-
-}
+  saveUserData
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

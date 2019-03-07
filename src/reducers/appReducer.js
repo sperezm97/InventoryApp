@@ -8,7 +8,7 @@ const config = {
 };
 
 const appReducer = persistCombineReducers(config, {
-  authReducer,
+  auth: authReducer,
 });
 
 export default function rootReducer(state, action) {

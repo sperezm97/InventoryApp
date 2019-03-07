@@ -30,7 +30,7 @@ class Register extends Component {
   renderLeftTitleBar() {
     return (
       <Button transparent small icon>
-        <Icon active name="ios-arrow-back" type="Ionicons" style={globalStyle.iconSize} />
+        <Icon active name="ios-arrow-back" type="Ionicons" style={globalStyle.iconSizeNav} />
       </Button>
     );
   }

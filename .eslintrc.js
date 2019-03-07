@@ -14,7 +14,8 @@ module.exports = {
       'eqeqeq': 'off',
       'object-curly-newline': 'off',
       'react/destructuring-assignment': 'off',
-      'import/no-unresolved': 'off'
+      'import/no-unresolved': 'off',
+      'global-require': 'off'
     },
     'globals': {
       "fetch": false

@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Container, Content, Item, Input, Button, Icon, View, Text } from 'native-base';
-import _ from 'lodash';
+import { Container, Content, Button, Icon, View, Text } from 'native-base';
+import InputStyle from '@components/InputStyle';
+import { globalStyle } from '@config/globalStyles';
+import SvgUri from 'react-native-svg-uri';
+import svgIcons from '../../config/imagesUris';
+import styles from './styles';
+import { colors } from '../../config/colors';
+import axios from '../../config/axios';
 
 class Login extends Component {
   static propTypes = {
@@ -18,46 +24,61 @@ class Login extends Component {
     super(props);
     this.state = {
       data: {
-        email: '',
+        username: '',
         password: ''
       },
       error: '',
       isLoading: null
-    }
+    };
   }
 
-
-  setUserInfo(property: string, value: string) {
-    const data = _.cloneDeep(this.state.data);
-    data[property] = value;
-    this.setState({ data });
+  singInUser() {
+    axios.post('/auth/login', this.state.data)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   render() {
     return (
-      <Container>
-        <Content padder>
-          <View>
-            {/* <Image source={{ uri: '' }} /> */}
-          </View>
-          <View>
-            <Item rounded>
-              <Icon name="ios-contact" type="Ionicons" />
-              <Input placeholder="mail@mail.com" />
-            </Item>
-            <Item rounded last>
-              <Icon name="ios-key" type="Ionicons" />
-              <Input placeholder="*******" />
-            </Item>
+      <Container style={{ flex: 1 }}>
+        <Content style={{ backgroundColor: colors.green7 }}>
+          <View style={[globalStyle.contentContainer, { backgroundColor: colors.lightGrey, borderRadius: 20, margin: 10 }]}>
+            <View style={styles.svgContainer}>
+              <SvgUri
+                height={200}
+                width={200}
+                source={svgIcons.inventoryLogo.uri}
+                fill={colors.green6}
+              />
+            </View>
             <View>
-              <Button iconLeft success>
-                <Icon name="login-variant" type="MaterialCommunityIcons" />
-                <Text>Sign in</Text>
-              </Button>
-              <Button iconLeft bordered success>
-                <Icon name="user-follow" type="SimpleLineIcons" />
-                <Text>Register</Text>
-              </Button>
+              <InputStyle
+                onChangeText={value => this.setState(prevState => ({ data: { ...prevState.data, username: value } }))}
+                value={this.state.data.username}
+                placeholder="Email"
+                Icon={<Icon active name="ios-contact" type="Ionicons" />}
+              />
+              <InputStyle
+                onChangeText={value => this.setState(prevState => ({ data: { ...prevState.data, password: value } }))}
+                value={this.state.data.password}
+                placeholder="Password"
+                Icon={<Icon active name="ios-key" type="Ionicons" />}
+                password
+              />
+              <View>
+                <Button block iconLeft success style={styles.button} onPress={() => this.singInUser()}>
+                  <Icon active name="login-variant" type="MaterialCommunityIcons" />
+                  <Text>Sign in</Text>
+                </Button>
+                <Button block iconLeft bordered success style={styles.button}>
+                  <Icon active name="user-follow" type="SimpleLineIcons" />
+                  <Text>Register</Text>
+                </Button>
+              </View>
             </View>
           </View>
         </Content>

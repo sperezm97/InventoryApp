@@ -1,8 +1,8 @@
 import axios from 'axios';
-
+import getStore from '../store';
 // Set config defaults when creating the instance
 const instance = axios.create({
-  baseURL: 'https://api.example.com',
+  baseURL: 'http://localhost:3000/',
   headers: {
 
   }
@@ -12,6 +12,9 @@ const instance = axios.create({
 // Add a request interceptor
 instance.interceptors.request.use(
   (config) => {
+    const store = getStore();
+
+    config.headers
     // Do something before request is sent
     return config;
   },

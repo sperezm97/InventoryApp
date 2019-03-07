@@ -5,18 +5,15 @@ export const authFlow = () => (
   Navigation.setRoot({
     root: {
       stack: {
-        children: [
-          {
-            component: {
-              name: screen.SCREEN_LOGIN
-            }
-          },
-          {
-            component: {
-              name: screen.SCREEN_REGISTER
-            }
+        children: [{
+          component: {
+            name: screen.SCREEN_REGISTER
           }
-        ]
+        }, {
+          component: {
+            name: screen.SCREEN_LOGIN
+          }
+        }]
       }
     }
   })

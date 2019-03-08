@@ -23,6 +23,7 @@
 - [ ] SENTRY IO ERROR TRACKING
 - [ ] PUSH NOTIFIACTION ANDROID/IOS
 - [ ] SWIPE LIST
+- [ ] Multiple Language
 
 
 ### CI Fastlane docs
@@ -30,3 +31,6 @@
 - Distribution to beta testing services [DOCS](https://docs.fastlane.tools/getting-started/ios/beta-deployment/)
 - Automate the App Store release process [DOCS](https://docs.fastlane.tools/getting-started/ios/appstore-deployment/)
 - How to setup code signing with fastlane [DOCS](https://docs.fastlane.tools/codesigning/getting-started/)
+
+# RECOMMENDED
+- WATCH THIS SERIES [ADVANCED REACT IMPLEMENTATION](https://www.youtube.com/watch?v=LTunyI2Oyzw&list=PL8V1empgrpJb--IOBFEY_54SHF-Ft5SAa&index=1)

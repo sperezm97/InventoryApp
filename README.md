@@ -24,8 +24,9 @@
 - [ ] PUSH NOTIFIACTION ANDROID/IOS
 - [ ] SWIPE LIST
 - [ ] Multiple Language
-
-
+- [ ] TDD
+- [ ] test End to End and automsation
+ 
 ### CI Fastlane docs
 - Automatically generate localized App Store screenshots [DOCS](https://docs.fastlane.tools/getting-started/ios/screenshots/)
 - Distribution to beta testing services [DOCS](https://docs.fastlane.tools/getting-started/ios/beta-deployment/)

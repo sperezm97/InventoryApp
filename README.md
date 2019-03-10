@@ -25,7 +25,7 @@
 - [ ] SWIPE LIST
 - [ ] Multiple Language
 - [ ] TDD
-- [ ] test End to End and automsation
+- [ ] TEst End to End and Automation
  
 ### CI Fastlane docs
 - Automatically generate localized App Store screenshots [DOCS](https://docs.fastlane.tools/getting-started/ios/screenshots/)

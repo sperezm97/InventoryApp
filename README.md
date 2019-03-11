@@ -26,7 +26,7 @@
 - [ ] Multiple Language
 - [ ] TDD
 - [ ] TEst End to End and Automation
-- [ ]Offline with [Realm](https://realm.io/docs/javascript/latest/) 
+- [ ] Offline with [Realm](https://realm.io/docs/javascript/latest/) 
  
 ### CI Fastlane docs
 - Automatically generate localized App Store screenshots [DOCS](https://docs.fastlane.tools/getting-started/ios/screenshots/)

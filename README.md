@@ -26,6 +26,7 @@
 - [ ] Multiple Language
 - [ ] TDD
 - [ ] TEst End to End and Automation
+- [ ]Offline with [Realm](https://realm.io/docs/javascript/latest/) 
  
 ### CI Fastlane docs
 - Automatically generate localized App Store screenshots [DOCS](https://docs.fastlane.tools/getting-started/ios/screenshots/)
@@ -33,5 +34,5 @@
 - Automate the App Store release process [DOCS](https://docs.fastlane.tools/getting-started/ios/appstore-deployment/)
 - How to setup code signing with fastlane [DOCS](https://docs.fastlane.tools/codesigning/getting-started/)
 
-# RECOMMENDED
+### Recommended
 - WATCH THIS SERIES [ADVANCED REACT IMPLEMENTATION](https://www.youtube.com/watch?v=LTunyI2Oyzw&list=PL8V1empgrpJb--IOBFEY_54SHF-Ft5SAa&index=1)

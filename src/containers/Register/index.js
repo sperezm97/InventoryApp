@@ -6,6 +6,8 @@ import { Container, Content, Title, Button, Icon, View, Text } from 'native-base
 import TitleBar from '@components/TitleBar';
 import { globalStyle } from '@config/globalStyles';
 import InputStyle from '@components/InputStyle';
+import { Navigation } from 'react-native-navigation';
+import * as screens from '../screens';
 
 class Register extends Component {
   static propTypes = {
@@ -27,9 +29,15 @@ class Register extends Component {
     };
   }
 
+  setValueToState(property : string, value : string) {
+    const data = { ...this.state.data };
+    data[property] = value;
+    this.setState(data);
+  }
+
   renderLeftTitleBar() {
     return (
-      <Button transparent small icon>
+      <Button transparent small icon onPress={() => Navigation.pop(this.props.componentId)}>
         <Icon active name="ios-arrow-back" type="Ionicons" style={globalStyle.iconSizeNav} />
       </Button>
     );
@@ -44,27 +52,27 @@ class Register extends Component {
   render() {
     const { email, password, confirmPassword } = this.state.data;
     return (
-      <Container>
+      <Container >
         <TitleBar
           left={this.renderLeftTitleBar()}
           body={this.renderCenterTitleBar()}
           right={<View />}
         />
-        <Content style={globalStyle.globalContainer}>
+        <Content contentContainerStyle={{ flex: 1, justifyContent: 'center', alignContent: 'flex-start' }}>
           <View style={globalStyle.contentContainer}>
             <InputStyle
-              onChangeText={value => this.setState(prevState => ({ data: { ...prevState.data, email: value } }))}
+              onChangeText={value => this.setValueToState('email', value)}
               value={email}
               placeholder="Email"
             />
             <InputStyle
-              onChangeText={value => this.setState(prevState => ({ data: { ...prevState.data, password: value } }))}
+              onChangeText={value => this.setValueToState('password', value)}
               value={password}
               placeholder="Password"
               password
             />
             <InputStyle
-              onChangeText={value => this.setState(prevState => ({ data: { ...prevState.data, confirmPassword: value } }))}
+              onChangeText={value => this.setValueToState('confirmPassword', value)}
               value={confirmPassword}
               placeholder="Confirm Password"
               password
@@ -77,19 +85,14 @@ class Register extends Component {
               </Text>
             </Button>
           </View>
-
         </Content>
       </Container>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-
-})
-
 const mapDispatchToProps = {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register);
+export default connect(null, mapDispatchToProps)(Register);

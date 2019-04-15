@@ -42,7 +42,7 @@ public class MainApplication extends NavigationApplication {
            // eg. new VectorIconsPackage()
        );
    }
- 
+
    @Override
    public List<ReactPackage> createAdditionalReactPackages() {
        return getPackages();

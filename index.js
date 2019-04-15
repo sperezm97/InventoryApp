@@ -4,14 +4,15 @@
 //  */
 
 import { Navigation } from 'react-native-navigation';
+import _ from 'lodash';
+import * as navFlows from './src/config/navigation-flows';
 import registrationScreen from './src/containers/registrationScreen';
-import * as navFlows from './src/config/navigationFlows';
+import getStore from './src/store';
 
+const store = getStore();
 registrationScreen();
 
 Navigation.events().registerAppLaunchedListener(() => {
-  console.ignoredYellowBox = false,
-  console.disableYellowBox = true
   Navigation.setDefaultOptions({
     topBar: {
       visible: false
@@ -56,5 +57,9 @@ Navigation.events().registerAppLaunchedListener(() => {
       interceptTouchOutside: true
     }
   });
-  navFlows.authFlow();
+  if (!_.isEmpty(store.getState().auth.user)) {
+    navFlows.principalFlow();
+  } else {
+    navFlows.authFlow();
+  }
 });
